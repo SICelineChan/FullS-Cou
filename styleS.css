@@ -1,0 +1,23 @@
+h1 {
+    color: #D83A56;
+    font-family: Verdana, sans-serif;
+    font-size: 100px;
+    text-align: center;
+    width:auto;
+}
+
+table, th, td {
+    border: 3px solid black;
+    background-color: #FF616D;
+    text-align: center;
+    font-size: 20px;
+    font-family: Verdana;
+    padding: 5px;
+}
+
+body {
+ background-color:#FFEAC9;
+ border-style: groove double;
+    border-color: #53BF9D;
+    border-width: 20px   
+}
