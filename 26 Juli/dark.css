@@ -1,0 +1,14 @@
+.day   { background: lightblue; color: black; }
+.night { background: lightcoral; color: black; }
+
+
+@media (prefers-color-scheme: dark) {
+    body { background-color: lightslategray;}
+    .day.dark-scheme   { background:  grey; color: white; }
+    .night.dark-scheme { background: darkgray; color:  #ddd; }
+  }
+  @media (prefers-color-scheme: light) {
+    body { background-color: aquamarine;}
+    .day.light-scheme   { background: white; color:  #555; }
+    .night.light-scheme { background:  green; color: black; }
+  }

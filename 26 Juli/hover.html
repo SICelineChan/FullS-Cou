@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>hover</title>
+</head>
+<style> 
+body {
+    display: flex;
+    
+}
+.word {
+    margin-top: 200px;
+    font-size: 50px;
+    text-decoration: none;
+    position: relative;
+    justify-content: center;
+    left: 400px;
+    
+}
+
+.toolkit {
+    background-color: aquamarine;
+    width: 150px;
+    height: 150px;
+    display: block;
+    position: absolute;
+    left: 450px;
+    top: 70px;
+    visibility:hidden ;
+}
+
+.container:hover .toolkit {
+    background-color: yellow;
+    visibility: visible;
+}
+
+</style>
+<body>
+    <div class="container">
+        <a class="word" href="">Link</a>
+        <span class="toolkit">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum quod fugiat culpa! Eveniet recusandae mollitia voluptatibus minus, excepturi officiis voluptate.</span>
+    </div>
+</body>
+</html>

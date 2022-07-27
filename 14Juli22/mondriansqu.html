@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>Day3 Mondrian Square</title>
+    </head>
+<Style>
+* {
+    box-sizing: border-box;
+    
+}
+.box {
+    width: 200px;
+    height: 150px;
+    border: 1px solid black;
+    font-size: 20px;
+    color: white;
+    margin: 15px;
+    display: flex;
+}
+#box1 {
+    background-color: red;
+    float: left;
+    top: 150px;
+    position: fixed;
+    
+}
+#box2 {
+    background-color: blue;
+    top: 20px;
+    right: -60px;
+    position: relative
+}
+#box3 {
+    background-color: green;
+    right: 200px;
+    float: inherit;
+    position: relative;
+    
+}
+#box4 {
+    background-color: yellow;
+    float: left;
+    top: 250px;
+    position: fixed;
+}
+#box5 {
+    background-color: purple;
+    position: absolute;
+    left: 600;
+    
+}
+#box6 {
+    background-color: aquamarine;
+}
+#box7 {
+    background-color: brown;
+    position: absolute;
+    right: 105px;
+    left: 416px;
+    top: 126px;
+
+}
+#box8 {
+    background-color: antiquewhite;
+    position: fixed;
+    left: 200px;
+    right: 100px;
+    top: 200px;
+}
+#div1 {
+    display: inline-flex;
+}
+#div2 {
+    display: inline-flex;
+}
+
+</Style>
+
+
+<body>
+ <div id="div1">   
+    <div id="box1" class="box">1</div>
+    <div id="box2" class="box">2</div>
+    <div id="box8" class="box">3</div>
+    <div id="box4"class="box">4</div>
+    <div id="box5" class="box">5</div>
+</div>
+<div id="div2"> 
+        <div id="box2"  class="box">1</div>
+        <div id="box1" class="box">4</div>
+        <div id="box5" class="box">3</div>
+        <div id="box6" class="box">2</div>
+        <div id="box7"class="box">5</div>
+</div>
+
+</body>
+
+</html>

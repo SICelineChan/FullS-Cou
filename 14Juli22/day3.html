@@ -1,0 +1,67 @@
+<html lang="en">
+<Head>
+    <Title>Box</Title>
+</Head>
+<style>
+* {
+    box-sizing: border-box;
+}
+.box {
+    width: 400px;
+    height: 300px;
+    border: 5px solid black;
+    font-size: 40px;
+    color: white;
+    margin: 15px;
+    display: inline-block;
+    
+    
+}
+/*this is how to comment on CSS*/
+#red {
+    background-color: red;
+   
+}
+#blue {
+    background-color: blue;
+    height: 150px;
+    float:left;
+}
+#green {
+    background-color: green;
+    position: absolute;
+    top:0px;
+    left: 0px;
+
+}
+span{
+    color:cadetblue;
+    font-size: 50px;
+    
+}
+.em {
+    font-weight: bold;
+    color: red;
+    
+}
+
+</style>
+<Body>
+    <div style="float: left, position: absolute;">
+        <button >button</button> 
+        <div id="blue">2</div>
+    </div>
+    
+    <div id="red" class="box">1</div>
+    <!-- here is a comment section, at the bottom is how you can comment 2 lines of html out and how to make box no.2 disappear on the webpage-->
+    <div id="blue" class="box">2</div>
+    <div id="green" class="box">3</div>
+    <div>
+        Let us have some rubbish here and I want to <span>give it a go</span> test the span tag.
+        Lorem ipsum dolor, <div class="em">whatever</div> sit amet consectetur adipisicing elit. Alias officia nemo est dignissimos similique recusandae? Atque perspiciatis, ab sunt recusandae laboriosam unde adipisci, debitis esse, ipsum quasi beatae harum! Quos.
+    </div>
+        
+</Body>
+
+
+</html>

@@ -1,0 +1,126 @@
+body {
+    background-color: #DEB6AB;
+    color: #495C83;
+    font-size: 25px;
+    font-family: 'Cabin', sans-serif;
+} 
+
+.navbar {
+    border-bottom: 1.5px solid silver;
+    background-color: #DEB6AB;
+    font-family: 'Dosis', sans-serif;
+    position: fixed;
+    top: 0;
+    left: -9px;
+    font-size: 30px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-shrink: 1;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+    width: 100vw;
+    height: 12vh;
+    margin: 0;
+      
+}
+
+.navbar li{
+    border-right: 3px solid silver;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 3;
+    justify-content: center;
+    align-items: center;
+      
+}
+
+.logo {
+    font-family: 'Merienda One', cursive;
+    color: #495C83;
+    background-color: #AC7D88;
+    font-size: 42px;
+    padding: 45px;
+    height: 13vh;
+    margin-left: 30px;
+    
+}
+
+.navbar li span {
+    font-size: 40px;
+    padding: 5px;
+}
+.navbar li:hover {
+    color: gold;
+}
+.navbar li a {
+    text-decoration: none;
+    
+}
+.navbar li a:hover {
+    color: gold;
+    background-color: aquamarine;
+}
+
+.navbar li:hover ul {
+    display: list-item;
+}
+.navbar li ul {
+    position: absolute;
+    width: 140px;
+    display: none;
+    bottom: -140px;
+    text-decoration: none;
+}
+.navbar li ul li:first-child {
+    border: 0;
+    font-size: 20px;
+    background-color: #D3CEDF;
+    text-decoration: none;
+}
+.navbar li ul li {
+    border: 0;
+    font-size: 20px;
+    font-family: 'Merienda One', cursive;
+    background-color: #D3CEDF;
+    text-decoration: none;
+     
+}   
+.side-column {
+    background-color: #AC7D88;
+    border-right: 3px solid silver;
+    z-index: -1;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: 100vh;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: -8px;
+}
+
+
+.textbox {
+    margin-top: 30px;
+    margin-left: 320px;
+}
+.textbox h1 {
+    font-family: 'Gudea', sans-serif;
+    font-size: 75px;
+    font-weight: bold;
+    color: #748DA6;
+    margin-top: 100px;
+    margin-left: 0px;
+    
+}
+.textbox img {
+    float: right;
+}

@@ -1,0 +1,39 @@
+body {
+    background-color: #F2D7D9;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin: 0 auto;
+    width: 500px;
+    text-align: justify;
+    
+}
+.olist1 li {
+    background-color: rgb(145, 145, 223);
+}
+.ulist2 li {
+    background-color: purple ;
+}
+.ulist3 li {
+    background-color: red;
+}
+h1 {
+    background-color: #F6C6EA;
+    border: 2px solid black;
+    border-radius: 15%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    text-align: center;
+
+}
+.h21 {
+    background-color: aqua;
+    font-size: 35px;
+    text-shadow: 3px 3px green;
+    text-align: center;
+
+}
+.ulist1 {
+    color: #748DA6;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}

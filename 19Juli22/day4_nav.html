@@ -1,0 +1,65 @@
+<html>
+    <meta charset="utf-8">
+    <head>
+        <title>Navigation</title>
+    </head>
+    <Style>
+.list1 {
+    background-color: aquamarine;
+    font-size: 35px;
+    list-style: none;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-shrink: inherit;
+    flex-wrap: wrap;
+
+
+}
+.list1 li {
+    display: inline-block;
+    padding: 0 50px;
+}
+.list1 li:first-child {
+    padding-left: 0;
+}
+.list1 li:last-child {
+    color: red;
+}
+.list-flex {
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 20vh;
+    align-items: center;
+}
+
+    </Style>
+
+    <body>
+        <nav>
+            <ul class="list1">
+                <li>Home</li>
+                <li>All Artists</li>
+                <li>Rock</li>
+                <li>Pop</li>
+                <li>R&B</li>
+                <li>Punk</li>
+                <li>Others</li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="list-flex">
+                <li>Home</li>
+                <li>All Artists</li>
+                <li>Rock</li>
+                <li>Pop</li>
+                <li>R&B</li>
+                <li>Punk</li>
+                <li>Others</li>
+            </ul>
+        </nav>
+
+    </body>
+</html>

@@ -1,0 +1,70 @@
+body {
+    background-color: #F6EEDF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin: 0 auto;
+    width: 70%;
+    text-align: justify;
+    
+}
+
+.olist1 li {
+    background-color: #FCD2D1;
+    
+}
+.ulist2 li {
+    background-color: #FFEDD3;
+    
+}
+.ulist3 li {
+    background-color: #FF7777;
+    
+}
+.ulist4 li {
+    background-color: #FE8F8F ;
+    
+}
+.ulist5{
+    text-align: center;
+    list-style-position: inside;
+}
+.callfriend {
+    border: 5px solid black;
+    box-shadow: red 3px 3px;
+    font-size: 25px;
+    letter-spacing: 3px;
+    
+}
+
+h1 {
+    background-color: #630A10;
+    border: 2px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 45px;
+    letter-spacing: 5px;
+    text-align: center;
+     
+
+}
+.h21 {
+    background-color: darkred;
+    font-size: 35px;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px yellow;
+    text-align: center;
+}
+
+
+.ulist1 {
+    color: #630A10;
+    font-family: Verdana, sans-serif;
+    font-size: 20px; 
+    list-style-position: inside;  
+    text-align: center;
+}
+
+#button {
+    background-color: solid black;
+    border-radius: 20%;
+
+}
