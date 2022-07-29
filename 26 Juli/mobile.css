@@ -1,135 +1,146 @@
+body {
+  background-color: lightblue;
+}
 .nav-container {
-    background-color: white;
-    
-    width: auto;
-    text-decoration: none;
-    
+  background-color: lightblue;
+  width: auto;
+  text-decoration: none;
 }
 .nav-items {
-    font-family: 'PT Sans', sans-serif;
-    background-color: darkcyan;
-    color: aliceblue;
-    font-size: 30px;
-    text-decoration: none;
-    list-style: none;
-    border-bottom: 3px solid silver;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    height: 20vh;
-    align-items: center;
-    position: relative;
-    left: 0;
-    top: -10px;
-    margin: 0;
-    padding: 20px;
-    
+  font-family: "PT Sans", sans-serif;
+  background-color: lightgoldenrodyellow;
+  color: aliceblue;
+  font-size: 40px;
+  text-decoration: none;
+  list-style: none;
+  border-bottom: 3px solid white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 20vh;
+  align-content: flex-start;
+  align-items: center;
+  position: relative;
+  left: 100px;
+  top: -10px;
+  margin: 0;
+  padding: 20px;
 }
 .nav-items li a {
-    
-    text-decoration: none;
+  text-decoration: none;
 }
 .side-nav {
-    font-family: 'Allerta Stencil', sans-serif;;
-    background-color: paleturquoise;
-    border-right: 3px solid white;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5vw;
-    height: 200vh;
-    z-index: 1;
-    
+  font-family: "Allerta Stencil", sans-serif;
+  font-size: 50px;
+  background-color: darkcyan;
+  border-right: 3px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-left: 20px;
+  width: 140px;
+  height: 200vh;
+  z-index: 1;
 }
 
 .main-container {
-    position: relative;
-    left: 100px;
-    text-align: justify;
-    word-wrap: normal;
-    width: 1200px;
-
+  font-family: "Poppins", sans-serif;
+  background-color: lightblue;
+  position: relative;
+  left: 220px;
+  text-align: justify;
+  width: 1200px;
+  overflow-wrap: break-word;
+  hyphens: manual;
 }
 .book {
-    float: right;
+  float: right;
 }
 .mobile-nav {
-    visibility: hidden;
+  visibility: hidden;
 }
-@media  screen and (max-width:600px) {
-    .nav-container {display: none;
-        visibility: hidden;}
-    .nav-items {visibility: hidden;}
-    .side-nav {visibility: hidden;}
-    
-    #logo {
-        visibility: visible;
-        font-size: 40px;
-        position: absolute;
-        float: left;
-        padding:20px
-    }
-    
-    .mobile-nav {
-        background-color: gold;
-        position: relative;
-        visibility: visible;
-    }
-    #items:hover {
-        color: greenyellow;
-    }
+@media screen and (max-width: 600px) {
+  .nav-container {
+    display: none;
+    visibility: hidden;
+  }
+  .nav-items {
+    visibility: hidden;
+  }
+  .side-nav {
+    visibility: hidden;
+  }
 
-    #items {
-        font-size: 50px;
-        float: right;
-        display: block;
-        top: 10px;
-        margin: auto;
-    }
-    #items li {
-        font-size: 20px;
-        list-style: none;
-        display: none;
-        width: 120px;
-    }
-    #items li a {
-        color: lightgray;
-        text-decoration: none;
-        
-    }
-    .mobile-nav:hover #items li {
-        background-color: black;
-        display: list-item 
-        
-        
-    }
+  #logo {
+    visibility: visible;
+    font-family: "Allerta Stencil", sans-serif;
+    font-size: 40px;
+    position: absolute;
+    float: left;
+    padding: 20px;
+  }
 
+  .mobile-nav {
+    background-color: gold;
+    position: relative;
+    visibility: visible;
+  }
+  #items:hover {
+    color: greenyellow;
+  }
 
-    .main-container h1 {
-        font-size: 30px;
-
-    }
-    .main-container {
-        border-top: 3px solid silver;
-        background-color: lavender;
-        position: fixed;
-        top: 120px;
-        left: 20px;
-        text-align: justify;
-        margin: -30px;
-        padding: 20px;
-        word-wrap: break-word;
-        z-index: -1;
-    }
-    .book {
-        width: 250px;
-        position: relative;
-        
-
-    }
-
-
-    
+  #items {
+    font-size: 50px;
+    position: absolute;
+    display: block;
+    justify-content: flex-end;
+    top: -40px;
+    margin-left: 80%;
+  }
+  #items li {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    list-style: none;
+    display: none;
+    width: 120px;
+    text-align: center;
+  }
+  #items li a {
+    color: lightgray;
+    text-decoration: none;
+  }
+  .mobile-nav:hover #items li {
+    background-color: black;
+    position: relative;
+    left: -45%;
+    display: list-item;
+  }
+  .main-container h1 {
+    font-size: 40px;
+  }
+  .main-container {
+    border-top: 3px solid silver;
+    background-color: lavender;
+    position: static;
+    /*position : relative*/
+    top: 120px;
+    left: 20px;
+    text-align: justify;
+    margin: -30px;
+    padding: 25px;
+    word-wrap: break-word;
+    z-index: -1;
+    inline-size: 500px;
+  }
+  .book {
+    width: 250px;
+    position: relative;
+  }
+  .main-container p {
+  }
 }
