@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Wiki form</title>
+  </head>
+  <body>
+    <h1>New Entry</h1>
+    <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="get">
+      <div class="maintext">
+        <fieldset>
+          <legend>Basic info</legend>
+          Artist
+          <input type="text" name="Artist Name" placeholder="e.g Madonna" />
+          Song
+          <input
+            type="text"
+            name="Artist Name"
+            placeholder="e.g Like a Virgin"
+          />
+          Info
+          <textarea name="Info" id="info" cols="30" rows="10">
+E.g. info about the song</textarea
+          >
+        </fieldset>
+      </div>
+      <div class="end-container">
+        <input type="radio" name="rock" />Rock
+        <input type="radio" name="pop" /> Pop
+        <input type="radio" name="punk" /> Punk Release Date
+        <input type="date" name="date" />
+      </div>
+    </form>
+    <footer>
+      <button type="button">Abbrechen</button>
+      <button type="button">Speichen</button>
+    </footer>
+  </body>
+</html>

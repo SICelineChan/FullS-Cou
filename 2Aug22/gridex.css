@@ -1,0 +1,42 @@
+/*Grid example in CSS*/
+#page {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  height: 100vh;
+  grid-template-areas:
+    "sidemenu   menu      menu      menu        menu      rightside"
+    "sidemenu   content   content   content     content   rightside"
+    "sidemenu   content   content   content     content   rightside"
+    "sidemenu   foot      foot      foot        foot       foot"
+    "midrid     midrid    midrid  midrid        midrid      midrid";
+}
+aside {
+  grid-area: sidemenu;
+  background-color: green;
+}
+main {
+  grid-area: content;
+  background-color: red;
+}
+nav {
+  grid-area: menu;
+  background-color: yellow;
+}
+.midrid {
+  grid-area: midrid;
+  background-color: purple;
+}
+.rightside {
+  grid-area: rightside;
+  background-color: blue;
+}
+footer {
+  grid-area: foot;
+  background-color: grey;
+}
+/*helper classes*/
+.wireframe {
+  margin: 5px;
+  /*border: 5px solid silver;*/
+}

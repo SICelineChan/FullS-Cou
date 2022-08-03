@@ -9,15 +9,14 @@ body {
 .nav-items {
   font-family: "PT Sans", sans-serif;
   background-color: lightgoldenrodyellow;
-  color: aliceblue;
-  font-size: 5vh;
+  font-size: 40px;
   text-decoration: none;
   list-style: none;
   border-bottom: 3px solid white;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  height: 20vh;
+  height: 15vh;
   align-content: flex-start;
   align-items: center;
   position: relative;
@@ -26,9 +25,16 @@ body {
   margin: 0;
   padding: 20px;
 }
+.nav-items li {
+  border-right: 3px solid silver;
+  padding-right: 25px;
+}
+
 .nav-items li a {
   text-decoration: none;
+  color: darkgreen;
 }
+
 .side-nav {
   font-family: "Allerta Stencil", sans-serif;
   font-size: 50px;
@@ -47,9 +53,7 @@ body {
   height: 200vh;
   z-index: 1;
 }
-#mobile-view {
-  display: none;
-}
+
 .main-container {
   font-family: "Poppins", sans-serif;
   background-color: lightblue;
@@ -64,7 +68,12 @@ body {
   float: right;
 }
 .mobile-nav {
-  visibility: hidden;
+  display: none;
+}
+.nav-items li:hover {
+  color: darkgoldenrod;
+  transform: scale(2);
+  transition: all 4s ease-in-out;
 }
 @media screen and (max-width: 600px) {
   .nav-container {
@@ -76,79 +85,90 @@ body {
   .side-nav {
     visibility: hidden;
   }
-  #mobile-view {
-    display: flex;
-  }
+
   #logo {
     visibility: visible;
-    position: relative;
-    top: 10vh;
     font-family: "Allerta Stencil", sans-serif;
-    font-size: 3rem;
+    font-size: 40px;
+    position: relative;
+    float: left;
     padding: 20px;
+    transition: all 7s ease-in-out;
+    animation: logomove 2s 4s infinite normal;
   }
 
-  #mobile-nav {
-    background-color: black;
-    border: 2px solid red;
+  .mobile-nav {
     position: relative;
-    top: 10px;
-    left: 50px;
-    /*position: relative or static makes no different here!*/
-    display: hidden;
-    width: 40px;
-    height: 160px;
-  }
-  /*Hamburger Menu*/
-  #mobile-nav-menu {
-    font-size: 60px;
-    position: relative;
-    left: 250px;
-    top: 20px;
-    padding-right: 20px;
-    list-style: none;
-  }
-  /*hovering properties*/
-  #mobile-nav-menu:hover {
-    color: blueviolet;
-  }
-  #mobile-view ul li:hover li {
     display: block;
+    height: 50px;
+    visibility: visible;
+  }
+  #items:hover {
+    color: greenyellow;
   }
 
-  #mobile-nav ul {
+  #items {
+    font-size: 50px;
+    position: relative;
+    display: block;
+    justify-content: center;
+    top: -10px;
+    margin-left: 450px;
+  }
+  #items li {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
     list-style: none;
+    display: none;
+    width: 120px;
+    text-align: center;
   }
-
-  #mobile-nav li a {
-    font-family: "PT Sans", sans-serif;
-    font-size: 2rem;
-    color: gold;
+  #items li a {
+    color: lightgray;
     text-decoration: none;
   }
-  /*main container*/
+  .mobile-nav:hover #items li {
+    background-color: black;
+    position: relative;
+    left: -75px;
+    display: list-item;
+    z-index: 1;
+  }
   .main-container h1 {
-    padding-top: 10px;
-    padding-left: 10px;
     font-size: 40px;
+    padding-top: 20px;
   }
   .main-container {
     border-top: 3px solid silver;
     background-color: lavender;
-    position: relative;
-    /*position : static*/
-    top: 18px;
+    position: absolute;
+    /*position : relative*/
+    top: 180px;
     left: 20px;
     text-align: justify;
     margin: -30px;
-    padding: 10px;
+    padding: 25px;
+    word-wrap: break-word;
     z-index: -1;
-    inline-size: auto;
-    width: 100vw;
+    inline-size: 500px;
+    width: auto;
   }
   .book {
     width: 250px;
     position: relative;
-    float: left;
+  }
+}
+@keyframes logomove {
+  0% {
+    transform: scale(0, 5);
+  }
+  25% {
+    transform: translateX(30px);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(cal(50vw-20px));
   }
 }

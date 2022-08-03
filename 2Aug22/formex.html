@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <h1>Order Your Ice Cream here!</h1>
+    <h2>Ice cream order form</h2>
+    <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="get">
+      <input type="date" name="date" /> Time of the order:
+      <input type="time" name="time" /><br />
+      Name of the Customer:
+
+      <input type="text" name="firstname" placeholder="e.g Smith" />
+      <br />
+      Which flavour of ice Cream
+      <input type="text" name="flavour" placeholder="e.g. chocolate" />
+      <br />
+
+      Extra Cream
+      <input type="checkbox" name="cream" id="cream" />
+      <br />
+      How many scoops?
+      <input type="number" name="no. of scoops" />
+      <br />
+      Color of your ice cream cup
+      <input type="color" name="color" />
+      <br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
