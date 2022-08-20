@@ -1,0 +1,41 @@
+#content {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas:
+    "side  head  head"
+    "side   main  main"
+    "side   main  main"
+    "side    end   end"
+    "side   .      foot";
+  grid-template-rows: 150px 2fr 1fr 1fr;
+  grid-template-columns: 150px 2fr;
+}
+#content > .head {
+  grid-area: head;
+  background-color: antiquewhite;
+}
+
+#content > .side {
+  grid-area: side;
+  background-color: aquamarine;
+}
+#content > .main {
+  grid-area: main;
+}
+#content > .end {
+  grid-area: end;
+}
+#content > .foot {
+  grid-area: foot;
+}
+fieldset {
+  background-color: lavender;
+  width: 50vw;
+}
+
+legend {
+  margin-left: auto;
+  background-color: black;
+  color: white;
+}

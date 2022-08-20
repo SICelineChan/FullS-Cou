@@ -6,36 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Music Wiki form</title>
   </head>
+  <link rel="stylesheet" href="musicform.css" />
   <body>
-    <h1>New Entry</h1>
+    
     <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="get">
-      <div class="maintext">
+      <div id="content">
+      <div class="head">headmenu</div>
+      <div class="side">sidemenu</div>
+      <div class="main">
+        <h1>New Entry</h1>
         <fieldset>
           <legend>Basic info</legend>
-          Artist
-          <input type="text" name="Artist Name" placeholder="e.g Madonna" />
-          Song
+          <label for="fname">Artist:</label>
           <input
             type="text"
+            id="aname"
             name="Artist Name"
-            placeholder="e.g Like a Virgin"
-          />
-          Info
-          <textarea name="Info" id="info" cols="30" rows="10">
-E.g. info about the song</textarea
+            placeholder="e.g. Madonna"
+          /><br /><br />
+
+          <label for="song">Song :</label>
+          <input
+            type="text"
+            id="songname"
+            name="Name of a song"
+            placeholder="e.g. Like a Virgin"
+          /><br /><br />
+
+          <div class="info-box">
+
+          <textarea
+            name="Info"
+            id="info"
+            cols="30"
+            rows="10"
+            placeholder="info about the song"
+          >
+Info</textarea
           >
         </fieldset>
       </div>
-      <div class="end-container">
+      <div class="end">
         <input type="radio" name="rock" />Rock
         <input type="radio" name="pop" /> Pop
         <input type="radio" name="punk" /> Punk Release Date
         <input type="date" name="date" />
       </div>
     </form>
-    <footer>
+    <footer class="foot">
       <button type="button">Abbrechen</button>
       <button type="button">Speichen</button>
     </footer>
+  </div>
   </body>
 </html>

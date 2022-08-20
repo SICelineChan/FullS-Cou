@@ -1,0 +1,47 @@
+/*$ is the symbol for variable in css */
+@mixin headline-font-style($font-size, $font-color: green) {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  color: $font-color;
+  font-size: $font-size;
+}
+h1 {
+  @include headline-font-style(50px, red);
+}
+h2 {
+  @include headline-font-style(30px);
+}
+h3 {
+  @include headline-font-style(15px);
+}
+
+@mixin button($font-size, $font-color: white) {
+  font-size: $font-size;
+  color: $font-color;
+  background-color: blue;
+  border: 2px solid blue;
+  border-top-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+  margin: 10px;
+}
+.btn1 {
+  @include button(30px);
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}
+
+.btn2 {
+  @include button(20px);
+  background-color: white;
+  color: blue;
+}
+.btn3 {
+  @include button(30px);
+}
+.btn4 {
+  @include button(30px);
+  cursor: pointer;
+  transition: all;
+}

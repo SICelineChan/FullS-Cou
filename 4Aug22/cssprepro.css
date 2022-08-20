@@ -1,0 +1,69 @@
+/*$ is the symbol for variable in css */
+h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  color: red;
+  font-size: 50px;
+}
+
+h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  color: green;
+  font-size: 30px;
+}
+
+h3 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  color: green;
+  font-size: 15px;
+}
+
+.btn1 {
+  font-size: 30px;
+  color: white;
+  background-color: blue;
+  border: 2px solid blue;
+  border-top-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+  margin: 10px;
+}
+.btn1:hover {
+  background-color: white;
+  color: black;
+}
+
+.btn2 {
+  font-size: 20px;
+  color: white;
+  background-color: blue;
+  border: 2px solid blue;
+  border-top-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+  margin: 10px;
+  background-color: white;
+  color: blue;
+}
+
+.btn3 {
+  font-size: 30px;
+  color: white;
+  background-color: blue;
+  border: 2px solid blue;
+  border-top-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+  margin: 10px;
+}
+
+.btn4 {
+  font-size: 30px;
+  color: white;
+  background-color: blue;
+  border: 2px solid blue;
+  border-top-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+  margin: 10px;
+  cursor: pointer;
+  transition: all;
+}/*# sourceMappingURL=cssprepro.css.map */

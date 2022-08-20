@@ -1,0 +1,39 @@
+How to print a sentence and using 3 variables.
+let myName = "Celine";
+let myLastName = "Chan";
+let myAge = 38;
+console.log("Hello, my name is " + myName + " " + myLastName + "!" + " I am " + myAge + " years old!");
+-------------------------------------------------------------------------------------------------------------------------------
+
+Number of M&M using the remainder function on JS.
+let mNum = 50;
+let nOfKids = 3;
+console.log("Daddy gets " + mNum % nOfKids + " M&Ms at the end.");
+--------------------------------------------------------------------------------------------------------------------------------
+Using prompt
+let myName = prompt("what is your name") ;
+let myLastName = prompt("what is your last name");
+
+result = "My Name is " + myName + myLastName;
+console.log(result);
+--------------------------------------------------------------------------------------------------------------------------------
+Hexadecimal and using .toString 
+let number = 0xff
+console.log(number);
+console.log(number.toString(12));
+--------------------------------------------------------------------------------------------------------------------------------
+Booleans
+let myAge = 19;
+let allowedDrinking = myAge >= 18;
+console.log(allowedDrinking);
+console.log("true");
+console.log(true);
+--------------------------------------------------------------------------------------------------------------------------------
+let myAge = prompt("What is your age?");
+let allowedDrinking = (myAge >= 18 && myAge <=88);
+
+
+if (allowedDrinking) { console.log(allowedDrinking + " " + "You are allowed. ");
+} 
+else { console.log(" it is disallowed.");
+}
