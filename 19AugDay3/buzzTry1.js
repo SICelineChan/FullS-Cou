@@ -25,11 +25,9 @@ while (counter <= 5) {
 }
 console.log(output);
 console.log(counter); */
-let counter = 0;
-let output = " ";
 
-while (counter < 100) {
-  counter++;
+let output = " ";
+for (let counter = 0; counter < 100; counter++) {
   if (counter % 3 == 0) {
     let drei = counter % 3 == 0;
     drei = "Fizz";
