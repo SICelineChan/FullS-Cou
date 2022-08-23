@@ -1,10 +1,11 @@
-let pplName = ["Andi", "Stefan", "Jan", "Ringo", "Agustina", "Celine", "Ringo"];
+let pplName = ["Andi", "Stefan", "Jan", "Rene", "Agustina", "Celine", "Ringo"];
 let longestName = " ";
+let word = pplName.length;
 let shortestName = " ";
-for (i = 0; i < pplName.length; i++) {
-  if (pplName[i].length > longestName.length) {
+for (i = 0; i < word; i++) {
+  if (pplName[i].length > word) {
     longestName = pplName[i];
-  } else if (pplName[i].length < longestName.length) {
+  } else if (pplName[i].length < word) {
     shortestName = pplName[i];
   }
 }
