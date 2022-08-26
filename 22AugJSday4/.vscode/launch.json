@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Launch Program",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}\\day4hwk.js"
+    },
+    {
+      "type": "node",
+      "name": "Run Current File",
+      "request": "launch",
+      "program": "${workspaceFolder}\\day4hwk.js"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+let counter = 1;
+let output = " ";
+
+		while (counter <= 20) {
+  		output = output + counter + " ";
+// output = output + 1
+	 	counter = counter * 2
+// 1 x 2 = 2
+// 2 x 2 = 4
+// 4 * 2 = 8 
+// 8 * 2 = 16
+} 
+console.log(output);
+----------------------------------
+
+let r = parseInt(prompt("put a number")) % 10
+console.log(r);
+
+if (r === 0) {console.log("Good");}
+else {console.log("Try Again");}
+---------------------------------------------------------------------------------------------
+let output = " ";
+// turns the output to be a string
+
+for (let counter = 1;
+// Let the counter be 1 at the beginning------------------
+     counter <= 10;
+// counter goes up to 10---------------------------
+     counter + 1) {
+// counter will add 1 --------------------------
+  
+  
+  output = output + " " + counter;
+// output first shows Number + space + (0+1) so output = 1
+// output second shows 1 + space + (1+1) so output = 2
+ 
+  
+  /*if (counter % 3 === 0) {
+    let name = (counter % 3 === 0);
+    name = "Buzz";
+    output = output + name;
+  }*/
+}
+console.log(output );
+
+
+------------------
+let counter = 1;
+let output = " ";
+
+while (counter <= 100) {
+  output = output + counter + " ";
+   counter = counter*3 + counter;
+    output = output + "tap" + " ";
+  
+  
+  counter = counter + 1;
+}
+console.log(output);

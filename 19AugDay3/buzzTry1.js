@@ -27,17 +27,22 @@ console.log(output);
 console.log(counter); */
 
 let output = " ";
-for (let counter = 0; counter < 100; counter++) {
-  if (counter % 3 == 0) {
-    let drei = counter % 3 == 0;
+for (let i = 0; i < 100; i++) {
+  if (i % 3 == 0) {
+    let drei = i % 3 == 0;
     drei = "Fizz";
     output = output + drei;
   }
-  if (counter % 5 == 0) {
-    let funf = counter % 5 == 0;
+  if (i % 5 == 0) {
+    let funf = i % 5 == 0;
     funf = "Buzz";
     output = output + funf;
   }
-  output += counter + ", ";
+  if (i % 3 == 0 && i % 5 == 0) {
+    let fizzbuzz = i % 3 == 0 && i % 5 == 0;
+    fizzbuzz = "FizzBuzz";
+    output = output + fizzbuzz;
+  }
+  output += i + ", ";
 }
 console.log(output);
