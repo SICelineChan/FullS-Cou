@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="buttUp">Go Up</button>
+    <button id="buttDown">Go down</button>
+
+    <p id="counter1">counter 1 = 0</p>
+    <p id="counter2">counter 2 = 0</p>
+
+    <label> <input type="radio" name="rg1" id="radio1" /> Counter 1 </label>
+
+    <label> <input type="radio" name="rg1" id="radio2" /> Counter 2 </label>
+
+    <script>
+      const counter1 = document.getElementById("counter1");
+      const counter2 = document.getElementById("counter2");
+      const buttUp = document.getElementById("buttUp");
+      const buttDown = document.getElementById("buttDown");
+
+      const radio1 = document.getElementById("radio1");
+      const radio2 = document.getElementById("radio2");
+
+      buttUp.addEventListener("click", shoutUp);
+      buttDown.addEventListener("click", goDown);
+
+      function shoutUp() {
+        counter += 1;
+        if ((radio1.check = true)) {
+          counter1.innerHTML = "Counter 1 = " + counter;
+        } else {
+          counter2.innerHTML = "COUNTER 2  = " + counter;
+        }
+      }
+      function goDown() {
+        counter -= 1;
+
+        counter1.innerHTML = "counter 1 =" + counter;
+        counter2.innerHTML = "COUNTER 2  =" + counter;
+      }
+
+      let counter = 0;
+    </script>
+  </body>
+</html>

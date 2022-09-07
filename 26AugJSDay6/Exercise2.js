@@ -7,10 +7,7 @@ function in_Str(array, value) {
       return true;
     }
   }
-  return false;
+  return "_";
 }
-console.log(in_Str("hello", "H")); //true
-console.log(in_Str("hello", "h")); //true
-console.log(in_Str("hello", "j")); // false
-console.log(in_Str("APPLE", "j"));
+
 console.log(in_Str("bOaT", "O"));

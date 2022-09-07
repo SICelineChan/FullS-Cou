@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS find elements</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <!-- <style>
+    #clickbutton {
+      background-color: antiquewhite;
+    }
+  </style> -->
+  <body>
+    <button id="clickbutton">Click Me!</button>
+    <script>
+      // creating a Function to have the required codes
+      //   function clickbutton() {
+      //     alert("Congratulation! You have click a button!");
+      //   }
+
+      const clickbutton = document.getElementById("clickbutton");
+
+      //   //better to set a var or const
+      //   clickbutton.style.color = "blue";
+      //   clickbutton.style.backgroundColor = "azure";
+      //   // adding an event listener to have JS to function
+      //   clickbutton.addEventListener("click", clickbutton);
+      // in this case the function is not called, as it is without the ()
+
+      function changbackground() {
+        //alert(3);
+        if (clickbutton.style.backgroundColor == "green") {
+          clickbutton.style.backgroundColor = "red";
+        } else {
+          clickbutton.style.backgroundColor = "green";
+        }
+      }
+      clickbutton.addEventListener("click", changbackground);
+    </script>
+  </body>
+</html>
