@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="print"></div>
+    <script>
+      const print = document.querySelector("#print");
+      const names = [
+        "Bob",
+        "Zach",
+        "Alicia",
+        "Donald",
+        "Rene",
+        "Tina",
+        "Maria",
+        "Roger",
+      ];
+
+      console.log(names.sort());
+      console.log(names);
+      print.innerHTML = names;
+
+      const ages = [2, 12, 100, 23, 43, 31, 54, 100, 33, 21, 51, 20];
+
+      ages.sort(function (a, b) {
+        console.log(`a: ${a}`);
+        console.log(`b: ${b}`);
+        return a - b;
+      });
+      console.log(ages);
+      document.write(ages);
+    </script>
+  </body>
+</html>

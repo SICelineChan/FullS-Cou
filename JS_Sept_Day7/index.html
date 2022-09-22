@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POJO</title>
+  </head>
+  <body>
+    <h1>POJO</h1>
+    <p>Plain Old Javascript Object</p>
+    <div id="print"></div>
+
+    <script>
+      const print = document.querySelector("#print");
+      const person = {
+        name: "Helder",
+        age: 41,
+        city: "Porto",
+      };
+
+      const otherPerson = {
+        name: "Bob",
+        age: 30,
+        city: "N.Y.",
+      };
+
+      if (person.age > otherPerson.age) {
+        alert(`${person.name} is oldest`);
+        print.innerHTML = `${person.name} is oldest, ${person.name} & ${person.age} & ${person.city}`;
+        console.log(person);
+      } else if (person.age < otherPerson.age) {
+        print.innerHTML = `${person.name} is youngest, ${person.name} & ${person.age} & ${person.city}`;
+      } else {
+        alert("they are both the same age");
+      }
+    </script>
+  </body>
+</html>

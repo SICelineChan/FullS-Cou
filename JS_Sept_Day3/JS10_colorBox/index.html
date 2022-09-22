@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #colorBox {
+        width: 200px;
+        height: 200px;
+        border: solid 2px black;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="colorBox"></div>
+    <button id="buttonChangeColor">Change Color!</button>
+    <script>
+      const buttonChangeColor = document.getElementById("buttonChangeColor");
+      const colorBox = document.getElementById("colorBox");
+      //for the color in the style.backgroundColor, it needs to be a "string"
+      //colorBox.style.backgroundColor = "red";
+      //first force the colorBox in a certain color
+      buttonChangeColor.addEventListener("click", function () {
+        if (colorBox.style.backgroundColor === "red") {
+          colorBox.style.backgroundColor = "green";
+        } else if (colorBox.style.backgroundColor === "green") {
+          colorBox.style.backgroundColor = "blue";
+        } else if (colorBox.style.backgroundColor === "blue") {
+          colorBox.style.backgroundColor = "red";
+        } else {
+          colorBox.style.backgroundColor = "green";
+        }
+      });
+    </script>
+  </body>
+</html>

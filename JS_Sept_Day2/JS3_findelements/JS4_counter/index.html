@@ -34,28 +34,27 @@
       buttonUp.addEventListener("click", GoUp);
       buttonDown.addEventListener("click", goDown);
 
+      let counter = 0;
+      let counterFor2 = 0;
+
       function GoUp() {
-        if (radioButton1.checked === true) {
+        counter += 1;
+        counterFor2 += 1;
+        if (radioButton1.checked) {
           counter1.innerHTML = "Counter 1 = " + counter;
         } else {
           counter2.innerHTML = "COUNTER 2  = " + counter;
         }
-
-        counter += 1;
-        counterFor2 += 1;
       }
       function goDown() {
         counter -= 1;
         counterFor2 -= 1;
-        if (radioButton1.checked === true) {
+        if (radioButton1.checked) {
           counter1.innerHTML = "Counter 1 = " + counter;
         } else {
           counter2.innerHTML = "COUNTER 2 = " + counterFor2;
         }
       }
-
-      let counter = 0;
-      let counterFor2 = 0;
     </script>
   </body>
 </html>

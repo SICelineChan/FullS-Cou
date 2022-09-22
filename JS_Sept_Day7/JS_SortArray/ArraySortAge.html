@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Age Array</title>
+  </head>
+  <style>
+    .table {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 18px;
+      width: fit-content;
+    }
+    .table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+
+      padding: 2px;
+      margin: 2px;
+    }
+  </style>
+  <body>
+    <div id="print"></div>
+    <script>
+      function createLine(human) {
+        let allInfo = `<p>${human.name} is ${human.age} from ${human.city}</p>`;
+        return allInfo;
+      }
+      function createTable(human) {
+        const allInfo = `
+        <div class ="table">
+          <table>
+        <colgroup ="3"></colgroup>
+          <tbody>
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+              </tr>
+             
+                <tr>
+                  <td>${human.name}</td>
+                
+                  <td>${human.age}</td>
+                
+                  <td>${human.city}</td>
+                </tr>
+                  
+              
+          </tbody>
+      </table>
+      </div>
+            `;
+        return allInfo;
+      }
+
+      const people = [
+        {
+          name: "Helder",
+          age: 41,
+          city: "Porto",
+        },
+        {
+          name: "Bob",
+          age: 30,
+          city: "N.Y.",
+        },
+        {
+          name: "Hannah",
+          age: 32,
+          city: "Hamburg",
+        },
+        {
+          name: "Charlie",
+          age: 73,
+          city: "London",
+        },
+        {
+          name: "Andreas",
+          age: 23,
+          city: "Berlin",
+        },
+        {
+          name: "Freya",
+          age: 16,
+          city: "Oslo",
+        },
+      ];
+
+      const print = document.querySelector("#print");
+      //Exercise 1
+
+      for (let i = 0; i < people.length; i++) {
+        people.sort((a, b) => a.age - b.age);
+        let allInfo = "";
+
+        // allInfo += people[i].name + " " + people[i].age + " " + people[i].city;
+        //allInfo = createLine(people[i]); //all info on each line
+
+        allInfo = createTable(people[i]);
+
+        //print on html
+        print.innerHTML += "<br></br> " + allInfo;
+      }
+    </script>
+
+    <!-- <script src="./fkdfkd.js"></script> -->
+  </body>
+</html>

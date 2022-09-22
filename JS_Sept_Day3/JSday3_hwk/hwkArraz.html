@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #photoBox {
+      border: dotted 10px yellow;
+      width: 250px;
+      height: 250px;
+      position: absolute;
+      left: 200px;
+      background-image: url(./images/dog.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+
+      background-color: darkgray;
+    }
+  </style>
+  <body>
+    <div id="photoBox"></div>
+
+    <button id="buttonForward">Go forward!</button>
+    <button id="buttonBackward">Go back</button>
+    <script>
+      const photoBox = document.getElementById("photoBox");
+      const buttonForward = document.getElementById("buttonForward");
+      const buttonBackward = document.getElementById("buttonBackward");
+
+      let dog = "url(./images/dog.png)";
+      let DutchDog = "url(./images/DutchDog.png)";
+      let squirrel = "url(./images/squirrel.png)";
+      let GreeceDog = "url(./images/GreeceDog.png)";
+      let catImg = "url(./images/cat.png)";
+
+      let animals = [catImg, dog, DutchDog, squirrel, GreeceDog];
+      let counter = 0;
+
+      buttonForward.addEventListener("click", function () {
+        counter++;
+
+        if (counter >= animals.length) {
+          counter = 0;
+        }
+
+        photoBox.innerHTML = counter;
+        photoBox.style.backgroundImage = animals[counter];
+
+        console.log("here is the counter " + counter);
+      });
+      buttonBackward.addEventListener("click", function () {
+        counter--;
+
+        if (counter < 0) {
+          counter = animals.length - 1;
+        }
+
+        photoBox.innerHTML = counter;
+        photoBox.style.backgroundImage = animals[counter];
+      });
+    </script>
+  </body>
+</html>

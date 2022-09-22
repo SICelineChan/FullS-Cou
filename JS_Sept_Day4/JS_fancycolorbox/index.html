@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #colorBox {
+        width: 200px;
+        height: 200px;
+        border: solid 2px black;
+        background-color: sandybrown;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="colorBox"></div>
+    <button id="buttonChangeColor">Change Color</button>
+    <button id="reverseChangeColor">Reverse Color</button>
+
+    <script>
+      const colorBox = document.getElementById("colorBox");
+      const buttonChangeColor = document.getElementById("buttonChangeColor");
+      const reverseChangeColor = document.getElementById("reverseChangeColor");
+
+      const colors = [
+        "sandybrown",
+        "purple",
+        "yellow",
+        "red",
+        "greenyellow",
+        "blue",
+        "pink",
+      ];
+
+      let counter = 0;
+      //console.log(Object.keys(colors));
+      buttonChangeColor.addEventListener("click", function () {
+        counter++;
+
+        colorBox.innerHTML = counter;
+        colorBox.style.backgroundColor = colors[counter];
+
+        if (counter >= colors.length) {
+          colorBox.style.backgroundColor = colors[0];
+          counter = 0;
+        }
+      });
+
+      reverseChangeColor.addEventListener("click", function () {
+        counter--;
+
+        colorBox.innerHTML = counter;
+        colorBox.style.backgroundColor = colors[counter];
+
+        if (counter < 0) {
+          counter = colors.length - 1;
+        }
+      });
+    </script>
+  </body>
+</html>

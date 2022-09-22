@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 4 Hwk 1</title>
+  </head>
+  <body>
+    <input id="userNum" type="text" value="0" placeholder="enter a number" />
+    <div id="show"></div>
+    <button id="formular">click</button>
+    <script>
+      const userNum = document.querySelector("#userNum");
+      const show = document.querySelector("#show");
+      const formular = document.querySelector("#formular");
+
+      formular.addEventListener("click", function () {
+        let n = 0;
+        for (let i = 0; i <= userNum.value; i++) {
+          if (i % 3 === 0 || i % 5 === 0) {
+            n += i;
+            console.log(i);
+            console.log("all the numbers added together " + n);
+          }
+        }
+        show.innerHTML = `here is the sum of all the numbers ${n} `;
+      });
+    </script>
+  </body>
+</html>

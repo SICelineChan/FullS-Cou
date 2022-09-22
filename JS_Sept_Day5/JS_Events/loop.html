@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #box {
+      width: 130px;
+      height: 30px;
+      border: 2px solid black;
+      margin-top: 5px;
+    }
+    .B {
+      width: 50px;
+      height: 50px;
+    }
+    #boxdiv {
+      width: 50px;
+      height: 50px;
+      background-color: whitesmoke;
+    }
+  </style>
+  <body>
+    <button class="BRed">a</button>
+    <button class="B">b/button>
+    <button class="B">c</button>
+    <button class="B">d</button>
+    <button class="B">e</button>
+    <button class="B">g</button>
+    <div id="boxdiv"></div>
+
+    <script>
+      const buttons = document.querySelectorAll("button");
+      const boxdiv = document.querySelector("#boxdiv");
+
+      
+
+      function handleButton(event) {
+        const letter = event.target.innerHTML;
+        
+        box.innerHTML += letter;
+      }
+
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", handleButton);
+      }
+    </script>
+  </body>
+</html>

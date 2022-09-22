@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 8 First Exercise</title>
+  </head>
+  <body>
+    <script>
+      //Ex 1 remove all numbers smaller than 5
+
+      const array1 = [12, 1, 4, 12, 43, 2, 4, 5, 2, 4, 10, 100];
+
+      const filtered = array1.filter(function (value) {
+        return value >= 5;
+      });
+      console.log(array1);
+      console.log(filtered);
+      // Exercise 2
+      const people = [
+        {
+          name: "Helder",
+          age: 41,
+          city: "Porto",
+        },
+        {
+          name: "Bob",
+          age: 30,
+          city: "N.Y.",
+        },
+        {
+          name: "Hannah",
+          age: 32,
+          city: "Hamburg",
+        },
+        {
+          name: "Charlie",
+          age: 73,
+          city: "London",
+        },
+        {
+          name: "Andreas",
+          age: 23,
+          city: "Berlin",
+        },
+        {
+          name: "Freya",
+          age: 16,
+          city: "Oslo",
+        },
+      ];
+      const filterPeople = people.filter(function (value) {
+        // return value.age > 20;
+        return value.name.length < 6;
+      });
+
+      console.log(people);
+      console.log(filterPeople);
+    </script>
+  </body>
+</html>

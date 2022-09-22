@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="number1" value="0" />
+    <select id="operation">
+      <option value="sum">+</option>
+      <option value="sub">-</option>
+      <option value="mult">x</option>
+      <option value="divi">/</option>
+      <option value="mod">mod</option>
+    </select>
+    <input type="number" id="number2" value="0" />
+    =
+    <input type="number" id="result" value="0" readonly />
+
+    <button id="calcButton">Calculate</button>
+
+    <script>
+      const number1 = document.getElementById("number1");
+      const number2 = document.getElementById("number2");
+      const operation = document.getElementById("operation");
+
+      const result = document.getElementById("result");
+      //const resultInput = document.getElementById("result");
+      const calcButton = document.getElementById("calcButton");
+
+      calcButton.addEventListener("click", calculate);
+      console.log(number1);
+      // let result = 0;
+      function calculate() {
+        if (operation.value == "sum") {
+          result.valueAsNumber = number1.valueAsNumber + number2.valueAsNumber;
+        } else if (operation.value == "sub") {
+          result.valueAsNumber = number1.valueAsNumber - number2.valueAsNumber;
+        } else if (operation.value == "mult") {
+          result.valueAsNumber = number1.valueAsNumber * number2.valueAsNumber;
+        } else if (operation.value == "divi") {
+          result.valueAsNumber = number1.valueAsNumber / number2.valueAsNumber;
+        } else if (operation.value == "mod") {
+          result.valueAsNumber = number1.valueAsNumber % number2.valueAsNumber;
+        }
+        //resultInput.value = result
+      }
+    </script>
+  </body>
+</html>

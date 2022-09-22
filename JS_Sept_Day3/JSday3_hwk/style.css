@@ -1,0 +1,36 @@
+#photoBox {
+  width: 160px;
+  height: 150px;
+  border: solid 2px black;
+}
+
+#backpic {
+  background-position: center;
+  background-size: cover;
+  background-image: url(squirrel_circle.png);
+}
+
+#catImg {
+  width: 150px;
+}
+#dogImg {
+  width: 150px;
+
+  visibility: hidden;
+}
+
+#dogDutchImg {
+  width: 150px;
+  position: absolute;
+  visibility: hidden;
+}
+#dogGreeceImg {
+  width: 150px;
+  position: absolute;
+  visibility: hidden;
+}
+#squirrelImg {
+  width: 150px;
+  position: absolute;
+  visibility: hidden;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="fruits" placeholder="type of fruit" type="value" />
+    <button id="addButton">Add</button>
+
+    <ul id="listOfFruit">
+      <li></li>
+      <li></li>
+    </ul>
+
+    <script>
+      const items = [];
+
+      const fruits = document.getElementById("fruits");
+      const addButton = document.getElementById("addButton");
+      const listOfFruit = document.getElementById("listOfFruit");
+
+      addButton.addEventListener("click", function () {
+        if (fruits.value.length === 0) {
+          alert("empty");
+          return;
+        }
+
+        // listOfFruit.innerHTML += `<li>${fruits.value}</li>`;
+
+        items.push(fruits.value);
+
+        fruits.value = "";
+
+        // fruits.value = prompt("enter a type of fruit");
+        // fruits.value = items;
+        console.log(items);
+      });
+
+      function fillFruits() {
+        let output = " ";
+        for (let i = 0; i < thing.length; i++) {
+          const thing = items[i];
+          listOfFruit.innerHTML += `<li>${fruits.value}</li>`;
+        }
+        // listOfFruit.innerHTML = output;
+      }
+    </script>
+  </body>
+</html>

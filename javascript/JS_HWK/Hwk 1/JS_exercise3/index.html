@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 3 Hwk1</title>
+  </head>
+  <body>
+    <div>
+      You may use the following to convert your Euros (&#128;) to Japanese Yen
+      (&#165;) & vice versa.
+    </div>
+    <input type="number" id="money1" />
+    <select id="currencies">
+      <option value="euro">&#128;</option>
+      <option value="yen">&#165;</option>
+    </select>
+    =
+    <input type="number" id="amount" value="0" />
+    <button id="convert">convert!</button>
+
+    <script>
+      const money1 = document.getElementById("money1");
+      const amount = document.getElementById("amount");
+      const convert = document.getElementById("convert");
+
+      const currencies = document.querySelector("#currencies");
+
+      convert.addEventListener("click", function () {
+        if (currencies.value == "euro") {
+          amount.valueAsNumber = money1.valueAsNumber * (143.19).toFixed(2);
+        } else if (currencies.value == "yen") {
+          amount.valueAsNumber = money1.valueAsNumber * (0.007).toFixed(2);
+        }
+      });
+    </script>
+  </body>
+</html>

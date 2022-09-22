@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #galleryWrapper {
+      border: solid 2px black;
+      width: 500px;
+      height: 100px;
+      margin: 20px auto 10px;
+
+      display: flex;
+      align-items: center;
+    }
+    #galleryWrapper > button {
+      width: 60px;
+      height: 20px;
+    }
+    #image {
+      width: 350px;
+      object-fit: contain;
+    }
+  </style>
+  <body>
+    <div id="galleryWrapper">
+      <button id="buttonNext">Next</button>
+      <img id="imageBox" />
+      <button id="buttonBack">Previous</button>
+    </div>
+
+    <script>
+      function updateimages() {
+        imageBox.src = "./images/" + images[counter];
+      }
+
+      const galleryWrapper = document.getElementById("galleryWrapper");
+      const buttonNext = document.getElementById("buttonNext");
+      const buttonBack = document.getElementById("buttonPrevi");
+
+      const images = [dog2.jpg, dog3.jpg, labra.jpg];
+
+      let counter = 0;
+      updateimages();
+      //document.write("it will work here but not in Eventlistener")
+
+      buttonBack.addEventListener("click", function () {
+        counter--;
+        if (counter < 0) {
+          counter = 8;
+        }
+      });
+      buttonNext.addEventListener("click", function () {
+        counter++;
+        if (counter > 0) {
+          counter = 0;
+        }
+        console.log(counter);
+      });
+    </script>
+  </body>
+</html>

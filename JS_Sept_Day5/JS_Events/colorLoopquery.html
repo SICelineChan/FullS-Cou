@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #box {
+      width: 130px;
+      height: 30px;
+      border: 2px solid black;
+      margin-top: 5px;
+    }
+    .B {
+      width: 50px;
+      height: 50px;
+    }
+    #boxdiv {
+      width: 50px;
+      height: 50px;
+      background-color: whitesmoke;
+      border: 2px solid black;
+    }
+  </style>
+  <body>
+    <button class="B">Red</button>
+    <button class="B">blue</button>
+    <button class="B">orange</button>
+    <button class="B">brown</button>
+    <button class="B">grey</button>
+    <button class="B">Green</button>
+    <div id="boxdiv"></div>
+
+    <script>
+      const buttons = document.querySelectorAll("button");
+      const boxdiv = document.querySelector("#boxdiv");
+
+      boxdiv.style.backgroundColor = "white";
+
+      function handleButton(event) {
+        const colorName = event.target.innerHTML;
+
+        boxdiv.innerHTML = colorName;
+        boxdiv.style.backgroundColor = colorName;
+
+        //event.target.style.backgroundColor = colorName;
+        //     //box.innerHTML += letter;
+      }
+
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", handleButton);
+        //button[i].style.backgroundColor = " ";
+      }
+      //event.target.style.backgroundColor = colorName;
+    </script>
+  </body>
+</html>

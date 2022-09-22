@@ -1,4 +1,3 @@
-console.log(start);
 let array = ["Agustina", "Andi", "Stefan", "Ringo", "Rene", "Celine", "Jan"];
 let first_str = array[0].length;
 let answer = array[0];

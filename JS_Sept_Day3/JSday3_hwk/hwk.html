@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #cat {
+      width: 250px;
+      border: 2px solid black;
+      object-fit: contain;
+    }
+
+    #back {
+      border: dotted 15px goldenrod;
+      width: 200px;
+      height: 200px;
+      background-image: url(./images/squirrel.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+
+      background-color: black;
+    }
+  </style>
+  <body>
+    <div id="photoBox">
+      <img id="cat" src="./images/cat.png" />
+    </div>
+    <div id="back"></div>
+
+    <button id="buttonForward">Go forward!</button>
+    <button id="buttonBackward">Fo back</button>
+    <script>
+      const photoBox = document.getElementById("photoBox");
+      const buttonForward = document.getElementById("buttonForward");
+      const buttonBackward = document.getElementById("buttonBackward");
+
+      let dog = "./images/dog.png";
+      let DutchDog = "./images/DutchDog.png";
+      let squirrel = "./images/squirrel.png";
+      let GreeceDog = "./images/GreeceDog.png";
+
+      back.style.backgroundImage = "url(./images/squirrel.png)";
+
+      buttonForward.addEventListener("click", function () {
+        // cat.src = dog;
+        if ((cat.src = dog)) {
+          dog = DutchDog;
+        }
+        if ((dog = DutchDog)) {
+          DutchDog = squirrel;
+        }
+        if ((DutchDog = squirrel)) {
+          squirrel = GreeceDog;
+        }
+      });
+    </script>
+  </body>
+</html>
