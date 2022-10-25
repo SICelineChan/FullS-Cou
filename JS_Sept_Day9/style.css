@@ -1,0 +1,24 @@
+body {
+  background-color: darkkhaki;
+}
+#mainContainer {
+  display: flex;
+}
+#pokeList {
+  border-color: blueviolet;
+  height: auto;
+  width: 50%;
+}
+#pokeDetail {
+  display: flex;
+  border-color: aquamarine;
+  height: auto;
+  width: 50%;
+}
+
+#pokeDetail > img {
+  display: block;
+  background-color: azure;
+  height: auto;
+  width: 50%;
+}

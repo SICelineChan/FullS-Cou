@@ -8,4 +8,4 @@ function triangle(size, slope) {
     console.log(output);
   }
 }
-triangle(3, 1);
+triangle(1, 3);

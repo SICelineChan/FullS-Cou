@@ -1,6 +1,6 @@
 function tree(line) {
   let ans = "";
-  for (let i = 5; i <= line; i--) {
+  for (let i = 5; i <= line; i++) {
     //console.log(i);
     for (let y = 5; y <= i; y++) {
       //console.log(i);
