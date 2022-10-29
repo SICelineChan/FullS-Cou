@@ -1,0 +1,46 @@
+/* font-family: 'Dosis', sans-serif;
+font-family: 'Nobile', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  font-family: "Nobile", sans-serif;
+  text-align: center;
+}
+h3 {
+  font-family: "Dosis", sans-serif;
+}
+.l {
+  color: darkgreen;
+  list-style-type: lower-greek;
+}
+.emoji li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 1rem;
+  text-indent: -0.75rem;
+}
+.emoji li::before {
+  content: "🍕";
+}
+.emoji li:nth-child(2)::before {
+  content: "🐶";
+}
+.emoji li:nth-child(3)::before {
+  content: "🌞";
+}
+
+img {
+  height: 250px;
+  width: 250px;
+  border-radius: 40%;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing travel places</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;700&family=Nobile&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Testing ejs and nodemon with json data</h1>
+    <h2>
+      To make sure this main page works, it needs to be in the "views" folder!
+    </h2>
+    <ul>
+      <li>
+        Also make sure the (for this case -) "name": "node-require-day3" in the
+        package-lock.json has all the packages set up and the name of the folder
+        (that root folder that you will be working on is correctly set up. See
+        the package-lock.json file.
+      </li>
+      <li>
+        Best to just copy and paste the package.json bit and revise (check) the
+        package-lock.json file with previous versions on Github!
+      </li>
+      <li>
+        Or mkdir in the terminal to create a new folder(in this case
+        "node-require-day3"), then do...
+      </li>
+      <ol>
+        <li><strong>npm i express</strong></li>
+        <p>
+          You <strong>always</strong> need the require("express") in the
+          index.js file.
+        </p>
+        <li><strong>npm i ejs</strong></li>
+        <p>
+          Once you get your local host set up and tested, you can now write some
+          html codes on the ejs file. Hence to install the ejs in your terminal.
+        </p>
+        <li><strong>npm i nodemon</strong></li>
+        <p>
+          This will auto refresh the terminal or restart the server. Without
+          doing this yourself in the terminal each time.
+        </p>
+        <li><strong>npm run dev</strong></li>
+        <p>For whatever reasons that you wanna restart the server!</p>
+      </ol>
+    </ul>
+    <hr />
+
+    <ul class="l">
+      <li>Set the "main page" or "main.ejs" up in the index.js file.</li>
+      <li>You need to use the app.get() to create a route!</li>
+      <hr />
+      <p>app.get("/", function (req, res)</p>
+      <p>{ res.render("main", templateData); });</p>
+      <hr />
+      <li>Then, to create a list of items that are data from the json file.</li>
+      <p>You must correctly set this part</p>
+      <hr />
+      <ul>
+        <li>
+          <strong>const templateData = {countries: travelplaces, };</strong>
+        </li>
+      </ul>
+      <hr />
+      <li>
+        Remember, we set at the beginning, on top of the index.js, we have
+        <strong
+          ><em>const travelplaces = require("./baseInfo.json");</em></strong
+        >
+      </li>
+      <p>
+        You want to set a different property to the "travelplaces" variable, so
+        now it is "countries"
+      </p>
+      <li>
+        Now you can do a loop and make sure it is the new "property".length
+      </li>
+      <p>in this case, it is set as <em>countries</em></p>
+      <h4>
+        You need to use the "< % =" + " % >", to make the information that you
+        want to appear on the browser
+      </h4>
+      <h4>
+        You will see in the main.ejs file, the loop has not got the "=", so that
+        is only a line of backend code.
+      </h4>
+    </ul>
+    <hr />
+    <h4>To create a list of items</h4>
+    <p>
+      After you have set up the loop, you can try with creating a list using the
+      li tag, wrap that around the following. Or an order list, so you can later
+      see the index on the info.ejs page.
+    </p>
+    <p>"< % = countries [i].city" % ></p>
+    <p>
+      this should show you the object in your json array and for this example -
+      city: ...and we refer to the variable countries and as the loop goes for
+      the [i] and . city
+    </p>
+    <hr />
+    <ol>
+      <% for (let i = 0; i < countries.length; i++) { %>
+      <a href="./info?indicia=<%=i%>"><li><%= countries[i].city %></li></a>
+      <% } %>
+    </ol>
+    <hr />
+    <h4>
+      To make them become a link to an information page, we wrap the whole line
+      in an < a ref > tag.
+    </h4>
+    <p>< a href="./info.ejs" >< li >< % = countries[i].city % >< /li >< /a></p>
+    <hr />
+    <h2>Let's create the information (info.ejs) page</h2>
+    <ul class="emoji">
+      <li>
+        Make sure <em>you create the ejs file in the views folder.</em> In this
+        case, it is info.ejs. Put some html there so you can test with res.send(
+        ) for starter.
+      </li>
+      <li>
+        !!Create a route in the index.js file. Or else no web browser page!!
+      </li>
+      <li>
+        Under the first set of app.get( ) codes, copy and paste or rewrite and
+        test the the new .ejs file works. (!! Go to Firefox, do the
+        localhost:3000/info!!)
+      </li>
+    </ul>
+    <hr />
+    <ol>
+      <li>app.get("/info", function (req, res)</li>
+      <li>{ const indicia = req.query.indicia || 1;</li>
+      <li>console.log(indicia);</li>
+      <li>const templateData = { countries: travelplaces[indicia], };</li>
+      <li>res.render("info", templateData); });</li>
+    </ol>
+    <hr />
+    <h3>The req.query.indicia part</h3>
+    <p>
+      No.2. "req. query" contains the URL query parameters (after the ? in the
+      URL)
+    </p>
+    <h3>Why console.log(indicia)?</h3>
+    <p>
+      No.3. whenever you click on the different city, in your terminal, it will
+      show you the indicia number. For example, index/ indicia 0 is the city
+      Seoul. You will see "0" in your termainl, it is the first index of the
+      array. Remember, the data becomes an array in the json file.
+    </p>
+    <h3>And what or why the hell is indicia!?</h3>
+    <p>
+      Instead of calling it index "again", I used indicia, just another word, so
+      I won't confuse this with index.js, this index or indicia is the "i" or
+      the index/object in the baseinfo.json, in this case it is the list of
+      places that I traveled to!
+    </p>
+    <p>
+      So now, when you hover over the list of cities, you see the link will go
+      link to the localhost /info page with an indicia = 0 to 5 or how ever huge
+      your data in your json file!
+    </p>
+    <h3>Now they all linked to the same info.ejs (aks the template)</h3>
+    <ul>
+      <li>
+        What template? Assuming you have a hundreds of data and you all want to
+        link them to the same html page with similar info but only a few things
+        that are different!
+      </li>
+      <li>
+        In this case, the info.ejs has a set of html codes, only the ejs codes
+        are different.
+      </li>
+    </ul>
+  </body>
+</html>

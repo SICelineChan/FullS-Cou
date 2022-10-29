@@ -1,0 +1,37 @@
+[
+  {
+    "continent": "Asia",
+    "country": "South Korea",
+    "city": "Seoul",
+    "image": "./images/southKorea.jpg",
+    "datetravelfrom": "12 August 2015"
+  },
+  {
+    "continent": "Asia",
+    "country": "Japan",
+    "city": "Osaka",
+    "image": "./images/osakaCastle.jpg",
+    "datetravelfrom": "5 September 2014"
+  },
+  {
+    "continent": "Europe",
+    "country": "Norway",
+    "city": "Bergen",
+    "image": "./images/Norway18Arp15.jpg",
+    "datetravelfrom": "15 April 2015"
+  },
+  {
+    "continent": "Europe",
+    "country": "Portugal",
+    "city": "Funchal",
+    "image": "./images/Madeira6Oct19.jpg",
+    "datetravelfrom": "6 October 2019"
+  },
+  {
+    "continent": "North America",
+    "country": "Mexico",
+    "city": "Mexico City",
+    "image": "./images/Mexico28Feb17_mod.jpg",
+    "datetravelfrom": "28 Feburary 2017"
+  }
+]
