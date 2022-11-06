@@ -26,6 +26,18 @@ app.get("/courses", function (req, res) {
   });
 });
 
+app.get("/aStudent", function (req, res) {
+  const number = req.query.number;
+  // console.log(number);
+
+  db.getStudentByNumber(number, function (results) {
+    const templateData = {
+      pupil: results[number],
+    };
+    res.render("aStudent", templateData);
+  });
+});
+
 app.listen(port, function () {
   console.log(`Listening to ${port} now!!!`);
 });

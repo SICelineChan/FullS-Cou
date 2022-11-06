@@ -8,15 +8,42 @@
     <link rel="stylesheet" href="CSS/styles.css" />
   </head>
   <body>
-    <h1>🥂 Hello World!! 📓</h1>
+    <h1>🥂 Hello My First Coding School!! 📓</h1>
 
     <ul>
       <% for (let i = 0; i < students.length; i++) { %>
 
       <li>
-        Hi <%= students[i].name %> We have nice email: <%= students[i].email %>
+        Hola! 🔢 <%= students[i].id %> 💃 <%= students[i].name %> 💽 my nice
+        email: <%= students[i].email %>
       </li>
       <% } %>
     </ul>
+
+    <h2>See our awesome courses</h2>
+    <a href="/courses">Courses</a>
+
+    <p>Our lovely Students</p>
+    <table>
+      <colgroup span="4"></colgroup>
+      <tr>
+        <th>A</th>
+        <th>b</th>
+        <th>C</th>
+        <th>a heading</th>
+      </tr>
+      <% for (let i=0; i< students.length; i++) { %>
+      <tr>
+        <td><% students[i].number %></td>
+        <td>
+          <a href="aStudent?number=<%=students[i].number%>"
+            ><%= students[i].name %>
+          </a>
+        </td>
+        <td><%= students[i].origin %></td>
+        <td></td>
+      </tr>
+      <% } %>
+    </table>
   </body>
 </html>

@@ -24,7 +24,17 @@ function getCourses(callback) {
   });
 }
 
+function getStudentByNumber(number, callback) {
+  const sqlQuery =
+    "SELECT students.name,origin, email, NUMBER, courses.id, courses.title, courses.teacher FROM students JOIN courses ON courses.id = students.course_id";
+
+  connection.query(sqlQuery, function (err, results) {
+    callback(results);
+  });
+}
+
 module.exports = {
   getStudents,
   getCourses,
+  getStudentByNumber,
 };
