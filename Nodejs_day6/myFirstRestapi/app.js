@@ -29,6 +29,12 @@ app.get("/courses", function (req, res) {
   });
 });
 
+app.get("/courseDetails", function (req, res) {
+  db.getCoursesWithStudents(function (results) {
+    res.json(results);
+  });
+});
+
 app.get("/students/:id", function (req, res) {
   const paramId = Number(req.params.id);
 

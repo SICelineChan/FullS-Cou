@@ -15,6 +15,22 @@ function getEveryCourse(callback) {
     callback(allCourses);
   });
 }
+function getCoursesWithStudents(callback) {
+  const queryString = `SELECT 
+                      NAME, 
+                      origin, 
+                      email, 
+                      course_id, 
+                      courses.title, 
+                      courses.id, 
+                      courses.teacher 
+                      FROM students JOIN courses ON students.course_id = courses.id`;
+  connection.query(queryString, function (err, results) {
+    const coursesWithpupils = results;
+    callback(coursesWithpupils);
+  });
+}
+
 function getEveryStudent(callback) {
   const queryString =
     "SELECT name, CONCAT('http://localhost:3000/students/', id) AS url FROM students";
@@ -36,13 +52,10 @@ function getOurStarPupil(callback) {
 }
 
 function getOurPupilsById(id, callback) {
-  const queryString = `SELECT id,
-                              name,
-                              origin,
-                              email,
-                              CONCAT("http://localhost:3000/courses/", course_id) AS Course_Title,
-                              FROM students
-                              WHERE id = ?`;
+  const queryString = `SELECT id, NAME, origin, email,
+  CONCAT('http://localhost:3000/courses/', course_id) AS Course
+  FROM students
+  WHERE id = ?`;
   const params = [id];
 
   connection.query(queryString, params, function (err, results) {
@@ -54,5 +67,6 @@ module.exports = {
   getEveryStudent,
   getOurStarPupil,
   getEveryCourse,
+  getCoursesWithStudents,
   getOurPupilsById,
 };
