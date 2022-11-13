@@ -20,6 +20,19 @@ function getCourseById(id, callback) {
 
   connection.query(queryString, params, function (err, results) {
     callback(results[0]);
+    //console.log(results[0]);
+  });
+}
+
+function deleteAcourseById(id, callback) {
+  const queryString = "DELETE From courses WHERE id = ?";
+  const params = [id];
+  // console.log(id);
+  connection.query(queryString, params, function (err, result) {
+    //callback(result);
+    callback(params);
+    // console.log(`This is params as ${params} in the db file`);
+    // console.log(`The result ${result} in the db file`);
   });
 }
 
@@ -37,8 +50,24 @@ function getCoursesByIdWithStudents(courseId, callback) {
   });
 }
 
+function insertIntoCourses(courseData, callback) {
+  const queryString = `INSERT INTO courses VALUES(NULL, ?, ?, ?, ?)`;
+  const params = [
+    courseData.title,
+    courseData.shortDescription,
+    courseData.courseEdition,
+    courseData.teacher,
+  ];
+  connection.query(queryString, params, function (err, result) {
+    //console.log(result);
+    callback(result);
+  });
+}
+
 module.exports = {
   getAllCourses,
   getCourseById,
   getCoursesByIdWithStudents,
+  insertIntoCourses,
+  deleteAcourseById,
 };

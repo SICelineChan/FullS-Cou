@@ -18,10 +18,12 @@ function courseById(req, res) {
   }
 
   coursesDB.getCourseById(paramId, function (result) {
+    console.log(result);
     if (result) {
       studentsDB.getStudentsByCourseId(paramId, function (students) {
         result.students = students;
         res.json(result);
+        console.log(students);
       });
     } else {
       res.status(404).json({
@@ -32,7 +34,49 @@ function courseById(req, res) {
   });
 }
 
+function addCourse(req, res) {
+  // We should probably do sanitize this date first
+  const newCourse = {
+    title: req.body.title,
+    shortDescription: req.body.shortDescription,
+    courseEdition: req.body.courseEdition,
+    teacher: req.body.teacher,
+  };
+  console.log(newCourse);
+
+  coursesDB.insertIntoCourses(newCourse, function (result) {
+    console.log(result);
+    const id = result.insertId;
+    console.log(id);
+    res.send(`Added to database with id: ${id}`);
+  });
+}
+
+function deleteCourse(req, res) {
+  const paramId = Number(req.params.id);
+  console.log(paramId);
+  if (!paramId) {
+    res.status(404).json({
+      status: "Error",
+      description: "Invalid URL, delete link not working!",
+    });
+    return;
+  }
+
+  coursesDB.deleteAcourseById(paramId, function (result) {
+    console.log(result);
+
+    const removedId = result.splice;
+    console.log(removedId);
+    res.send(
+      `Ok so you have removed some course ${removedId} and the paramID was ${paramId}!`
+    );
+  });
+}
+
 module.exports = {
   courses,
   courseById,
+  addCourse,
+  deleteCourse,
 };
