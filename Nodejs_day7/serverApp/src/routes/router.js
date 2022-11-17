@@ -5,7 +5,7 @@ const courseRouter = require("./courses");
 const router = express.Router();
 
 router.get("/", function (req, res) {
-  res.send("Router works!");
+  res.send("Homepage! Router works!");
 });
 
 router.use("/students", studentRouter);

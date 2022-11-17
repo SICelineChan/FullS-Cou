@@ -1,6 +1,15 @@
 # JPG
 *.jpg
 
+# PNG
+*.png
+
+# TXT
+*.txt
+
+# README file
+*.md
+
 # Logs
 logs
 *.log

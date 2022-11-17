@@ -8,7 +8,8 @@ function courses(req, res) {
 }
 
 function courseById(req, res) {
-  const paramId = Number(req.params.id);
+  // const paramId = Number(req.params.id);
+  const paramId = req.params.id;
   if (!paramId) {
     res.status(404).json({
       status: "An Error has occurred!",
@@ -74,9 +75,17 @@ function deleteCourse(req, res) {
   });
 }
 
+function coursesByPage(req, res) {
+  coursesDB.getCourseByLimit(function (results) {
+    res.json(results);
+    console.log(results);
+  });
+}
+
 module.exports = {
   courses,
   courseById,
   addCourse,
   deleteCourse,
+  coursesByPage,
 };

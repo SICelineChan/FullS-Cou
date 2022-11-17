@@ -7,10 +7,18 @@ function getAllCourses(callback) {
   connection.query(queryString, function (err, results) {
     callback({
       count: results.length,
-      next: "Next 2 courses will come soon",
-      previous: "See last 2 courses will come later!",
+      next: "http://localhost:3000/courses/page/limit/5",
+      previous: "null",
       results: results,
     });
+  });
+}
+
+function getCourseByLimit(callback) {
+  const queryString = "SELECT id, title, teacher From courses Limit 5";
+  connection.query(queryString, function (err, results) {
+    callback(results);
+    console.log(results);
   });
 }
 
@@ -23,7 +31,7 @@ function getCourseById(id, callback) {
     //console.log(results[0]);
   });
 }
-
+// -----------------Delete a Course--------------------!!!
 function deleteAcourseById(id, callback) {
   const queryString = "DELETE From courses WHERE id = ?";
   const params = [id];
@@ -35,7 +43,7 @@ function deleteAcourseById(id, callback) {
     // console.log(`The result ${result} in the db file`);
   });
 }
-
+// -----------------Get A Course and show How Many Students!!!
 function getCoursesByIdWithStudents(courseId, callback) {
   const queryString = `SELECT courses.*, students.name,
     CONCAT("/students/", students.id)
@@ -49,7 +57,7 @@ function getCoursesByIdWithStudents(courseId, callback) {
     callback(results);
   });
 }
-
+// -------------------the app.insert to add a new course to the database
 function insertIntoCourses(courseData, callback) {
   const queryString = `INSERT INTO courses VALUES(NULL, ?, ?, ?, ?)`;
   const params = [
@@ -70,4 +78,5 @@ module.exports = {
   getCoursesByIdWithStudents,
   insertIntoCourses,
   deleteAcourseById,
+  getCourseByLimit,
 };
