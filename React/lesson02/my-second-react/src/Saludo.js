@@ -7,7 +7,7 @@ function Saludo(props) {
           color: "darkblue",
           fontWeight: "bold",
           fontSize: "25px",
-          textAlign: "justify",
+          textAlign: "center",
         }}
       >
         <h1>

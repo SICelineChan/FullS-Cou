@@ -18,6 +18,7 @@ aName.render(
     <AppNo2 />
   </React.StrictMode>
 );
+
 // From React Tutorial
 // These lines are for the
 const msgUnread = ReactDOM.createRoot(document.getElementById("msgUnread"));
@@ -35,7 +36,7 @@ msgUnread.render(element);
 const msgUnreadIcon = ReactDOM.createRoot(
   document.getElementById("msgUnreadIcon")
 );
-const msgIcon = <h1>25</h1>;
+const msgIcon = <h1>{20 + 5}</h1>;
 msgUnreadIcon.render(msgIcon);
 
 // Composing a Component
@@ -49,7 +50,7 @@ function UrgentAction(props) {
         }}
       >
         <h1>and also don't forget the {props.digit} unread messages</h1>
-        <p>that {props.person} will double check on you!</p>
+        <p>{props.person} will be checking on you!</p>
       </div>
       <p
         style={{
@@ -67,7 +68,9 @@ const urgentMsgs = ReactDOM.createRoot(document.getElementById("urgentMsgs"));
 const ele = (
   <h1>
     {/* {""} */}
-    <strong>But please read the {10 + 2} Urgent messages! </strong>{" "}
+    <strong>
+      But please read the {Math.floor(Math.random() * 10)} Urgent message/s!{" "}
+    </strong>{" "}
     <UrgentAction digit="25" person="The Big Boss" />
   </h1>
 );

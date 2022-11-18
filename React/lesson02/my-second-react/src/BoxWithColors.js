@@ -6,6 +6,7 @@ function BoxWithColors(props) {
           backgroundColor: "purple",
           border: "5px",
           borderColor: "solid black",
+          fontSize: "15px",
           color: "yellow",
           display: "flex",
           justifyItems: "right",
@@ -27,14 +28,15 @@ function BoxWithColors(props) {
           display: "flex",
           alignSelf: "flex-end",
           alignContent: "start",
-          height: "90px",
-          width: "250px",
+          fontSize: "15px",
+          height: "70px",
+          width: "200px",
           margin: "5px",
           padding: "2px",
           fontWeight: "bolder",
         }}
       >
-        🎶Lalalala🎶 I am box No 2 but with id instead of "className"
+        🎶Lalalala🎶 I'm box No.2 but with id instead of "className"
       </div>
     </>
   );

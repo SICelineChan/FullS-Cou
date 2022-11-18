@@ -1,9 +1,12 @@
 import Saludo from "./Saludo";
+import DateOfToday from "./DateOfToday";
 
 function AppNo2() {
   return (
     <div className="AppNo2">
-      <Saludo name="Juan" location="la Ciudad de México ">
+      <DateOfToday></DateOfToday>
+
+      <Saludo name="Juan" location="Mexico City!!">
         <h2
           style={{
             backgroundColor: "lightskyblue",
