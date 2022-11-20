@@ -1,4 +1,4 @@
-function Saludo(props) {
+function Saludo({ name, location, children }) {
   return (
     <>
       <div
@@ -11,10 +11,10 @@ function Saludo(props) {
         }}
       >
         <h1>
-          Hola!! {props.name} de {props.location} 🏜
+          Hola!! {name} de {location} 🏜
         </h1>
       </div>
-      {props.children}
+      {children}
     </>
   );
 }
