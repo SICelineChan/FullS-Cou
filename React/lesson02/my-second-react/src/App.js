@@ -3,7 +3,7 @@ import TopNav from "./TopNav";
 import SideMenuItem from "./SideMenuItem";
 import SubMenu from "./SubMenu";
 import MainBody from "./MainBody";
-import DateOfToday from "./UnsedComponents/DateOfToday";
+
 import Footer from "./Footer";
 import UrgentItems from "./UrgentItems";
 import MyButton from "./UnsedComponents/MyButton";
@@ -65,7 +65,6 @@ function App() {
             <br />
 
             <MainBody>
-              <DateOfToday></DateOfToday>
               Hello Mr/Ms {name},
               <br />
               you have <strong>{unreadMsg}</strong> unread messages.
