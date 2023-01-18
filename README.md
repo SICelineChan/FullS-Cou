@@ -1,2 +1,4 @@
 # FullS-Cou
-Hello, welcome to this giant huge repo and an especially messy repo. As you can see this was my first go with Github and these are 95% of the stuff I have learnt and still learning as to be a fullstack web developer. There are some useful codes and infos in here.
+Hello, welcome to this giant huge repo and it is a little messy, but this is my go-to mini library of all the codes that I've learnt at the HCS. 
+This is also my first-ever attempt with Github, whilst still learning as to be a fullstack web developer. 
+Since I've graduated, you will find my other personal projects and coding practice in other repos.
